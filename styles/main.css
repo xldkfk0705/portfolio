@@ -249,6 +249,15 @@ img {
   display: flex;
   align-items: center;
   padding-top: 72px;
+  background: radial-gradient(ellipse at 80% 80%, rgba(57, 255, 20, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 20%, rgba(57, 255, 20, 0.03) 0%, transparent 50%),
+              var(--bg-primary);
+}
+
+[data-theme="light"] .hero {
+  background: radial-gradient(ellipse at 80% 80%, rgba(29, 185, 84, 0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 20% 20%, rgba(29, 185, 84, 0.03) 0%, transparent 50%),
+              var(--bg-primary);
 }
 
 .hero .container {
