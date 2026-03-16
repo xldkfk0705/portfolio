@@ -26,7 +26,7 @@
       </button>
       <div class="nav__menu">
         <ul class="nav__links">
-          <li><a href="#how-i-work">How I Work</a></li>
+          <li><a href="#hero">How I Work</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#connect">Connect</a></li>
@@ -39,199 +39,183 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="hero" class="hero">
-    <div class="container">
-      <p class="hero__greeting">Tae Eun</p>
-      <h1 class="hero__name">Tenny Kwon</h1>
-      <h2 class="hero__title">Creative Strategist</h2>
-      <p class="hero__tagline">I build the structures that help ideas move.</p>
-      <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
-    </div>
-  </section>
+  <!-- Network Canvas (behind everything) -->
+  <div class="network-page">
+    <canvas id="network-canvas"></canvas>
 
-  <!-- How I Work -->
-  <section id="how-i-work" class="how-i-work">
-    <div class="container">
-      <h2 class="section__title">How I Work</h2>
-      <div class="cards-grid">
-        <article class="card animate-on-scroll">
-          <h3 class="card__title">Bridging Perception Gaps</h3>
-          <p class="card__description">Growing up across cultures taught me early that what feels obvious to one person can be invisible to another. That instinct stayed with me. In my work, I pay close attention to where understanding breaks down so teams can align before momentum is lost.</p>
-        </article>
-        <article class="card animate-on-scroll">
-          <h3 class="card__title">The Art of Alignment</h3>
-          <p class="card__description">To me, strategy is not just planning. It is creating the conditions for people to move in the same direction. I care about both structure and emotion because a system only works when it makes sense and resonates with the people inside it.</p>
-        </article>
-        <article class="card animate-on-scroll">
-          <h3 class="card__title">Navigating the Unpaved Path</h3>
-          <p class="card__description">I do my best work before the path is fully defined. I am most energized in early-stage, ambiguous environments where the challenge is not just improving what exists, but shaping what should exist in the first place.</p>
-        </article>
+    <!-- Tooltip for skill dots (positioned by JS) -->
+    <div class="skill-tooltip" id="skill-tooltip" aria-hidden="true"></div>
+
+    <!-- Zone 1: Hero + Skills Constellation -->
+    <section id="hero" class="zone zone--hero">
+      <div class="hero-text">
+        <p class="hero__greeting">Tae Eun</p>
+        <h1 class="hero__name">Tenny Kwon</h1>
+        <h2 class="hero__title">Creative Strategist</h2>
+        <p class="hero__tagline">I build the structures that help ideas move.</p>
+        <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Selected Projects -->
-  <section id="projects" class="projects">
-    <div class="container">
-      <h2 class="section__title">How It Took Shape</h2>
-      <p class="section__subtitle">Selected Projects</p>
-      <div class="projects-grid">
-
-        <a href="projects/outlist.html" class="project-card animate-on-scroll" style="--card-accent: #39FF14;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">01</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">Outlist</h3>
-            <p class="project-card__meta">Maker &middot; SCAD &middot; 2026</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">Building a Decision Engine with AI-Assisted Prototyping</p>
-          </div>
-        </a>
-
-        <a href="projects/atlanta-fwc26.html" class="project-card animate-on-scroll" style="--card-accent: #00D4AA;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">02</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">AtlantaFWC26 Last Mile</h3>
-            <p class="project-card__meta">Creative Strategist &middot; SCAD &middot; 2026</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">Designing the Epicenter System</p>
-          </div>
-        </a>
-
-        <a href="projects/afan.html" class="project-card animate-on-scroll" style="--card-accent: #7B61FF;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">03</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">AFAN</h3>
-            <p class="project-card__meta">Program Architect &middot; KOFIC &middot; 2023</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">Governance as a Creative Act</p>
-          </div>
-        </a>
-
-        <a href="projects/ko-pick.html" class="project-card animate-on-scroll" style="--card-accent: #FF6B6B;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">04</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">KO-PICK Showcase</h3>
-            <p class="project-card__meta">Program Lead &middot; KOFIC &middot; 2022&ndash;2024</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">From Spectacle to Matchmaking</p>
-          </div>
-        </a>
-
-        <a href="projects/public-health-trust.html" class="project-card animate-on-scroll" style="--card-accent: #FFB347;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">05</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">Rebuilding Public Health Trust</h3>
-            <p class="project-card__meta">Strategy Lead &middot; SCADpro x Deloitte &middot; 2025</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">Designing a Communication Framework for Post-Pandemic Recovery</p>
-          </div>
-        </a>
-
-        <a href="projects/coming-soon.html" class="project-card project-card--placeholder animate-on-scroll" style="--card-accent: #888;">
-          <div class="project-card__image" aria-hidden="true">
-            <span class="project-card__number">06</span>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">Coming Soon</h3>
-            <p class="project-card__meta">New project on the way</p>
-          </div>
-          <div class="project-card__overlay">
-            <p class="project-card__tagline">Stay tuned for more</p>
-          </div>
-        </a>
-
+      <div class="hero__scroll-hint">
+        <span>Scroll to explore</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 class="section__title">About Me</h2>
-      <p class="about__bio animate-on-scroll">My work sits between structure and imagination. I have spent more than a decade building cross-border partnerships and strategic programs in film and media, and more recently expanding that practice into research, business innovation, and experience strategy through graduate work in the U.S. Across those settings, I have been most drawn to the same challenge: how to turn complexity into something people can align around and move with.</p>
+    <!-- Zone 2: Projects as Network Nodes -->
+    <section id="projects" class="zone zone--projects">
+      <div class="container">
+        <h2 class="section__title">How It Took Shape</h2>
+        <p class="section__subtitle">Selected Projects</p>
 
-      <div class="timeline">
-        <div class="timeline__item animate-on-scroll">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Creative Strategist</h3>
-            <p class="timeline__org">Atlanta World Cup Host Committee / Metro Atlanta Chamber / SCAD &middot; 2026&ndash;Present</p>
-            <p class="timeline__description">Helped shape how Atlanta welcomes the world for FIFA World Cup 2026. I translated cultural insight, brand storytelling, and spatial logic into a citywide experience system that helps people move with clarity while building collective energy.</p>
-          </div>
+        <div class="project-nodes">
+          <a href="projects/outlist.html" class="project-node" data-project="proj-outlist">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">01</span>
+              <h3 class="project-node__title">Outlist</h3>
+              <p class="project-node__meta">Maker &middot; SCAD &middot; 2026</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">Building a Decision Engine with AI-Assisted Prototyping</p>
+            </div>
+          </a>
+
+          <a href="projects/atlanta-fwc26.html" class="project-node" data-project="proj-atlanta">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">02</span>
+              <h3 class="project-node__title">AtlantaFWC26 Last Mile</h3>
+              <p class="project-node__meta">Creative Strategist &middot; SCAD &middot; 2026</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">Designing the Epicenter System</p>
+            </div>
+          </a>
+
+          <a href="projects/afan.html" class="project-node" data-project="proj-afan">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">03</span>
+              <h3 class="project-node__title">AFAN</h3>
+              <p class="project-node__meta">Program Architect &middot; KOFIC &middot; 2023</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">Governance as a Creative Act</p>
+            </div>
+          </a>
+
+          <a href="projects/ko-pick.html" class="project-node" data-project="proj-kopick">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">04</span>
+              <h3 class="project-node__title">KO-PICK Showcase</h3>
+              <p class="project-node__meta">Program Lead &middot; KOFIC &middot; 2022&ndash;2024</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">From Spectacle to Matchmaking</p>
+            </div>
+          </a>
+
+          <a href="projects/public-health-trust.html" class="project-node" data-project="proj-health">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">05</span>
+              <h3 class="project-node__title">Rebuilding Public Health Trust</h3>
+              <p class="project-node__meta">Strategy Lead &middot; SCADpro x Deloitte &middot; 2025</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">Designing a Communication Framework for Post-Pandemic Recovery</p>
+            </div>
+          </a>
+
+          <a href="projects/coming-soon.html" class="project-node project-node--placeholder" data-project="proj-soon">
+            <div class="project-node__dot"></div>
+            <div class="project-node__card">
+              <span class="project-node__number">06</span>
+              <h3 class="project-node__title">Coming Soon</h3>
+              <p class="project-node__meta">New project on the way</p>
+            </div>
+            <div class="project-node__overlay">
+              <p class="project-node__tagline">Stay tuned for more</p>
+            </div>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <div class="timeline__item animate-on-scroll">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Strategy Lead</h3>
-            <p class="timeline__org">Deloitte / SCAD &middot; 2025</p>
-            <p class="timeline__description">Led strategy for a public-facing healthcare communication project focused on improving clarity, trust, and accessibility.</p>
+    <!-- Zone 3: About -->
+    <section id="about" class="zone zone--about">
+      <div class="container">
+        <h2 class="section__title">About Me</h2>
+        <p class="about__bio">My work sits between structure and imagination. I have spent more than a decade building cross-border partnerships and strategic programs in film and media, and more recently expanding that practice into research, business innovation, and experience strategy through graduate work in the U.S. Across those settings, I have been most drawn to the same challenge: how to turn complexity into something people can align around and move with.</p>
+
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Creative Strategist</h3>
+              <p class="timeline__org">Atlanta World Cup Host Committee / Metro Atlanta Chamber / SCAD &middot; 2026&ndash;Present</p>
+              <p class="timeline__description">Helped shape how Atlanta welcomes the world for FIFA World Cup 2026. I translated cultural insight, brand storytelling, and spatial logic into a citywide experience system that helps people move with clarity while building collective energy.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="timeline__item animate-on-scroll">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Team Lead, International Relations</h3>
-            <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2022&ndash;2024</p>
-            <p class="timeline__description">Led cross-border partnerships and strategic initiatives across the global film industry. I built programs, alliances, and new ways of working that helped stakeholders move from shared intent to real collaboration.</p>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Strategy Lead</h3>
+              <p class="timeline__org">Deloitte / SCAD &middot; 2025</p>
+              <p class="timeline__description">Led strategy for a public-facing healthcare communication project focused on improving clarity, trust, and accessibility.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="timeline__item animate-on-scroll">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Associate, Communications &amp; Stakeholder Relations</h3>
-            <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2018&ndash;2022</p>
-            <p class="timeline__description">Worked at the intersection of communication, coordination, and institutional trust. I helped make complex stakeholder interactions more structured, responsive, and sustainable across teams and external partners.</p>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Team Lead, International Relations</h3>
+              <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2022&ndash;2024</p>
+              <p class="timeline__description">Led cross-border partnerships and strategic initiatives across the global film industry. I built programs, alliances, and new ways of working that helped stakeholders move from shared intent to real collaboration.</p>
+            </div>
           </div>
-        </div>
 
-        <div class="timeline__item animate-on-scroll">
-          <div class="timeline__marker"></div>
-          <div class="timeline__content">
-            <h3 class="timeline__role">Specialist, International Market Operations</h3>
-            <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2013&ndash;2018</p>
-            <p class="timeline__description">Supported Korea's presence at major international film markets through operations, industry programs, and market analysis.</p>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Associate, Communications &amp; Stakeholder Relations</h3>
+              <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2018&ndash;2022</p>
+              <p class="timeline__description">Worked at the intersection of communication, coordination, and institutional trust. I helped make complex stakeholder interactions more structured, responsive, and sustainable across teams and external partners.</p>
+            </div>
+          </div>
+
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__content">
+              <h3 class="timeline__role">Specialist, International Market Operations</h3>
+              <p class="timeline__org">Korean Film Council (KOFIC) &middot; 2013&ndash;2018</p>
+              <p class="timeline__description">Supported Korea's presence at major international film markets through operations, industry programs, and market analysis.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Let's Connect -->
-  <section id="connect" class="connect">
-    <div class="container">
-      <h2 class="section__title animate-on-scroll">Let's Connect</h2>
-      <p class="connect__text animate-on-scroll">I'm always open to conversations about strategy, creative collaboration, or new challenges worth solving.</p>
-      <div class="connect__links animate-on-scroll">
-        <a href="mailto:kw.tenny@gmail.com" class="connect__link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Email Me
-        </a>
-        <a href="https://www.linkedin.com/in/tennykwon/" target="_blank" rel="noopener noreferrer" class="connect__link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn
-        </a>
+    <!-- Zone 3 cont: Connect -->
+    <section id="connect" class="zone zone--connect">
+      <div class="container">
+        <h2 class="section__title">Let's Connect</h2>
+        <p class="connect__text">I'm always open to conversations about strategy, creative collaboration, or new challenges worth solving.</p>
+        <div class="connect__links">
+          <a href="mailto:kw.tenny@gmail.com" class="connect__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Me
+          </a>
+          <a href="https://www.linkedin.com/in/tennykwon/" target="_blank" rel="noopener noreferrer" class="connect__link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
