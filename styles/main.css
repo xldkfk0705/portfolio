@@ -350,14 +350,14 @@ img { max-width: 100%; display: block; }
   50% { box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.8); }
 }
 
-/* Node positions — matching SVG line endpoints (as % of 800x700) */
-.hero__node--1 { top: 11.4%; left: 33.75%; }  /* 270,80 — decorative */
-.hero__node--2 { top: 5.7%;  left: 66.25%; }  /* 530,40 — decorative */
-.hero__node--3 { top: 48.6%; left: 17.5%;  }  /* 140,340 — Skills/Core */
-.hero__node--4 { top: 71.4%; left: 18.75%; }  /* 150,500 — Education */
-.hero__node--5 { top: 54.3%; left: 87.5%;  }  /* 700,380 — Languages */
-.hero__node--6 { top: 80%;   left: 77.5%;  }  /* 620,560 — decorative */
-.hero__node--7 { top: 88.6%; left: 43.75%; }  /* 350,620 — Tools */
+/* Node positions — asymmetric scattered layout (800x700 viewBox) */
+.hero__node--1 { top: 8.6%;  left: 22.5%;  }  /* (180,60) — decorative, top-left */
+.hero__node--2 { top: 7.1%;  left: 52.5%;  }  /* (420,50) — decorative, top-center */
+.hero__node--3 { top: 47.1%; left: 10%;    }  /* (80,330) — Core/Skills, left-center */
+.hero__node--4 { top: 68.6%; left: 25%;    }  /* (200,480) — Education, lower-left cluster */
+.hero__node--5 { top: 42.9%; left: 92.5%;  }  /* (740,300) — Languages, far-right */
+.hero__node--6 { top: 61.4%; left: 77.5%;  }  /* (620,430) — decorative, right-center */
+.hero__node--7 { top: 85.7%; left: 47.5%;  }  /* (380,600) — Tools, bottom-center */
 
 /* Node content (categories below dots) */
 .hero__node-content {
