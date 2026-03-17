@@ -49,62 +49,110 @@
     <!-- Zone 1: Hero + Profile + Categories -->
     <section id="hero" class="zone zone--hero">
       <div class="hero__container">
-        <!-- Left: Identity text -->
+        <!-- Left 30%: Identity text -->
         <div class="hero-text">
           <p class="hero__greeting">Tae Eun</p>
-          <h1 class="hero__name">Tenny Kwon</h1>
+          <h1 class="hero__name">Tenny<br>Kwon</h1>
           <h2 class="hero__title">Creative Strategist</h2>
           <p class="hero__tagline">I build the structures that help ideas move.</p>
           <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
         </div>
 
-        <!-- Right: Photo + scattered categories -->
-        <div class="hero__right">
-          <div class="hero__photo-network"></div>
+        <!-- Right 70%: Network + Photo + 7 Dot-Nodes -->
+        <div class="hero__network">
+          <!-- SVG network lines (behind everything) -->
+          <svg class="hero__network-lines" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+            <!-- Outer constellation -->
+            <line x1="270" y1="80" x2="530" y2="40" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <line x1="530" y1="40" x2="680" y2="130" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="680" y1="130" x2="700" y2="380" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            <line x1="700" y1="380" x2="620" y2="560" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="620" y1="560" x2="350" y2="620" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+            <line x1="350" y1="620" x2="150" y2="500" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            <line x1="150" y1="500" x2="140" y2="340" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <line x1="140" y1="340" x2="270" y2="80" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <!-- Cross lines -->
+            <line x1="270" y1="80" x2="700" y2="380" stroke="currentColor" stroke-width="1" opacity="0.1"/>
+            <line x1="530" y1="40" x2="350" y2="620" stroke="currentColor" stroke-width="1" opacity="0.08"/>
+            <line x1="140" y1="340" x2="620" y2="560" stroke="currentColor" stroke-width="1" opacity="0.1"/>
+            <line x1="150" y1="500" x2="680" y2="130" stroke="currentColor" stroke-width="1" opacity="0.08"/>
+            <line x1="270" y1="80" x2="620" y2="560" stroke="currentColor" stroke-width="1" opacity="0.06"/>
+            <line x1="530" y1="40" x2="150" y2="500" stroke="currentColor" stroke-width="1" opacity="0.06"/>
+            <line x1="140" y1="340" x2="700" y2="380" stroke="currentColor" stroke-width="1" opacity="0.08"/>
+          </svg>
+
+          <!-- Photo -->
           <img src="assets/images/profile.jpg.png" alt="Tenny Kwon" class="hero__photo-img">
 
-          <!-- Education: top-left -->
-          <div class="hero__category hero__category--education">
-            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Education</h3>
-            <ul class="hero__category-list">
-              <li>Savannah College of Art and Design (SCAD) | M.A., Creative Business Leadership</li>
-              <li>Hankuk University of Foreign Studies | B.Pol.Sci., Television &amp; Film; B.A., English Interpretation &amp; Translation</li>
-            </ul>
+          <!-- Dot 1: top-center-left (decorative) -->
+          <div class="hero__node hero__node--1">
+            <span class="hero__node-dot"></span>
           </div>
 
-          <!-- Skills: left of photo, middle -->
-          <div class="hero__category hero__category--skills">
-            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Skills</h3>
-            <ul class="hero__category-list">
-              <li data-skill="crossborder">Cross-Border Partnerships</li>
-              <li data-skill="program">Program &amp; Project Management</li>
-              <li data-skill="bizdev">Business Development</li>
-              <li data-skill="alignment">Stakeholder Alignment</li>
-              <li data-skill="process">Process Design</li>
-            </ul>
+          <!-- Dot 2: top-right (decorative) -->
+          <div class="hero__node hero__node--2">
+            <span class="hero__node-dot"></span>
           </div>
 
-          <!-- Tools: bottom center -->
-          <div class="hero__category hero__category--tools">
-            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Tools</h3>
-            <ul class="hero__category-list hero__category-list--tools">
-              <li>Microsoft Office</li>
-              <li>Google Workspace</li>
-              <li>Notion</li>
-              <li>Figma</li>
-              <li>Canva</li>
-              <li>Adobe Creative Suite</li>
-              <li>GenAI</li>
-            </ul>
+          <!-- Dot 3: left mid — CORE (Skills) -->
+          <div class="hero__node hero__node--3">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Core</h3>
+              <ul class="hero__category-list">
+                <li data-skill="crossborder">Cross-Border Partnerships</li>
+                <li data-skill="program">Program &amp; Project Management</li>
+                <li data-skill="bizdev">Business Development</li>
+                <li data-skill="alignment">Stakeholder Alignment</li>
+                <li data-skill="process">Process Design</li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Languages: far right -->
-          <div class="hero__category hero__category--languages">
-            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Languages</h3>
-            <ul class="hero__category-list">
-              <li>Korean <span class="hero__skill-level">Native</span></li>
-              <li>English <span class="hero__skill-level">Fluent</span></li>
-            </ul>
+          <!-- Dot 4: center-left — EDUCATION -->
+          <div class="hero__node hero__node--4">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Education</h3>
+              <ul class="hero__category-list">
+                <li>SCAD | M.A., Creative Business Leadership</li>
+                <li>HUFS | B.Pol.Sci., TV &amp; Film; B.A., English Interpretation &amp; Translation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dot 5: right edge — LANGUAGES -->
+          <div class="hero__node hero__node--5">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Languages</h3>
+              <ul class="hero__category-list">
+                <li>Korean <span class="hero__skill-level">Native</span></li>
+                <li>English <span class="hero__skill-level">Fluent</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dot 6: bottom-right (decorative) -->
+          <div class="hero__node hero__node--6">
+            <span class="hero__node-dot"></span>
+          </div>
+
+          <!-- Dot 7: bottom-left — TOOLS -->
+          <div class="hero__node hero__node--7">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Tools</h3>
+              <ul class="hero__category-list hero__category-list--tools">
+                <li>Microsoft Office</li>
+                <li>Google Workspace</li>
+                <li>Notion</li>
+                <li>Figma</li>
+                <li>Canva</li>
+                <li>Adobe Creative Suite</li>
+                <li>GenAI</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
