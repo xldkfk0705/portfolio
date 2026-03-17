@@ -46,15 +46,61 @@
     <!-- Tooltip for skill dots (positioned by JS) -->
     <div class="skill-tooltip" id="skill-tooltip" aria-hidden="true"></div>
 
-    <!-- Zone 1: Hero + Skills Constellation -->
+    <!-- Zone 1: Hero + Profile + Skills -->
     <section id="hero" class="zone zone--hero">
-      <div class="hero-text">
-        <p class="hero__greeting">Tae Eun</p>
-        <h1 class="hero__name">Tenny Kwon</h1>
-        <h2 class="hero__title">Creative Strategist</h2>
-        <p class="hero__tagline">I build the structures that help ideas move.</p>
-        <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
+      <div class="hero__container">
+        <!-- Left: Identity -->
+        <div class="hero-text">
+          <p class="hero__greeting">Tae Eun</p>
+          <h1 class="hero__name">Tenny Kwon</h1>
+          <h2 class="hero__title">Creative Strategist</h2>
+          <p class="hero__tagline">I build the structures that help ideas move.</p>
+          <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
+        </div>
+
+        <!-- Center: Profile Photo -->
+        <div class="hero__photo">
+          <div class="hero__photo-frame">
+            <img src="assets/images/profile.jpg" alt="Tenny Kwon" class="hero__photo-img">
+          </div>
+        </div>
+
+        <!-- Right: Skills -->
+        <div class="hero__skills">
+          <div class="hero__skill-group">
+            <h3 class="hero__skill-heading">Core</h3>
+            <ul class="hero__skill-list">
+              <li data-skill="crossborder"><span class="hero__skill-dot"></span>Cross-Border Partnerships</li>
+              <li data-skill="program"><span class="hero__skill-dot"></span>Program &amp; Project Management</li>
+              <li data-skill="bizdev"><span class="hero__skill-dot"></span>Business Development</li>
+              <li data-skill="alignment"><span class="hero__skill-dot"></span>Stakeholder Alignment</li>
+              <li data-skill="process"><span class="hero__skill-dot"></span>Process Design</li>
+            </ul>
+          </div>
+
+          <div class="hero__skill-group">
+            <h3 class="hero__skill-heading">Tools</h3>
+            <ul class="hero__skill-list hero__skill-list--tools">
+              <li>Microsoft Office</li>
+              <li>Google Workspace</li>
+              <li>Notion</li>
+              <li>Figma</li>
+              <li>Canva</li>
+              <li>Adobe Creative Suite</li>
+              <li>GenAI</li>
+            </ul>
+          </div>
+
+          <div class="hero__skill-group">
+            <h3 class="hero__skill-heading">Languages</h3>
+            <ul class="hero__skill-list hero__skill-list--languages">
+              <li><span class="hero__skill-dot"></span>Korean <span class="hero__skill-level">Native</span></li>
+              <li><span class="hero__skill-dot"></span>English <span class="hero__skill-level">Fluent</span></li>
+            </ul>
+          </div>
+        </div>
       </div>
+
       <div class="hero__scroll-hint">
         <span>Scroll to explore</span>
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
