@@ -161,9 +161,7 @@
     skillIds.forEach(function (id) {
       var el = document.querySelector('[data-skill="' + id + '"]');
       if (!el) return;
-      var dot = el.querySelector('.hero__skill-dot');
-      var target = dot || el;
-      var rect = target.getBoundingClientRect();
+      var rect = el.getBoundingClientRect();
       positions[id] = {
         x: rect.left + rect.width / 2,
         y: rect.top + scrollY + rect.height / 2
