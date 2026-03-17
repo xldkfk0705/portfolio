@@ -18,7 +18,7 @@
   <!-- Navigation -->
   <nav class="nav" id="nav">
     <div class="nav__container">
-      <a href="#hero" class="nav__logo">TK</a>
+      <a href="#hero" class="nav__logo">tennyinmotion</a>
       <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
         <span></span>
@@ -26,10 +26,10 @@
       </button>
       <div class="nav__menu">
         <ul class="nav__links">
+          <li><a href="#hero">Home</a></li>
           <li><a href="#hero">How I Work</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#connect">Connect</a></li>
+          <li><a href="#projects">Selected Projects</a></li>
+          <li><a href="#connect">Contact</a></li>
         </ul>
         <button class="nav__theme-toggle" aria-label="Toggle dark/light mode">
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
@@ -62,87 +62,47 @@
         <div class="hero__network">
           <!-- SVG network lines (behind everything) -->
           <svg class="hero__network-lines" viewBox="0 0 800 700" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
-            <!-- 1→2 top horizontal -->
-            <line x1="180" y1="60" x2="420" y2="50" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-            <!-- 1→3 left side -->
-            <line x1="180" y1="60" x2="80" y2="330" stroke="currentColor" stroke-width="1" opacity="0.25"/>
-            <!-- 2→5 top-right diagonal -->
-            <line x1="420" y1="50" x2="740" y2="300" stroke="currentColor" stroke-width="1" opacity="0.15"/>
-            <!-- 2→6 center diagonal -->
-            <line x1="420" y1="50" x2="620" y2="430" stroke="currentColor" stroke-width="1" opacity="0.12"/>
-            <!-- 3→4 left cluster -->
-            <line x1="80" y1="330" x2="200" y2="480" stroke="currentColor" stroke-width="1" opacity="0.3"/>
-            <!-- 3→7 left to bottom -->
-            <line x1="80" y1="330" x2="380" y2="600" stroke="currentColor" stroke-width="1" opacity="0.1"/>
-            <!-- 4→7 bottom-left -->
-            <line x1="200" y1="480" x2="380" y2="600" stroke="currentColor" stroke-width="1" opacity="0.25"/>
-            <!-- 4→6 center cross -->
-            <line x1="200" y1="480" x2="620" y2="430" stroke="currentColor" stroke-width="1" opacity="0.12"/>
-            <!-- 5→6 right cluster -->
-            <line x1="740" y1="300" x2="620" y2="430" stroke="currentColor" stroke-width="1" opacity="0.2"/>
-            <!-- 6→7 bottom-right -->
-            <line x1="620" y1="430" x2="380" y2="600" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+            <!-- 1→2 top-left to tools -->
+            <line x1="120" y1="120" x2="530" y2="60" stroke="currentColor" stroke-width="1" opacity="0.28"/>
+            <!-- 1→4 top-left to core -->
+            <line x1="120" y1="120" x2="335" y2="375" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+            <!-- 2→3 tools to top-right -->
+            <line x1="530" y1="60" x2="690" y2="100" stroke="currentColor" stroke-width="1" opacity="0.2"/>
+            <!-- 3→5 top-right to education -->
+            <line x1="690" y1="100" x2="695" y2="310" stroke="currentColor" stroke-width="1" opacity="0.25"/>
+            <!-- 3→6 top-right to languages -->
+            <line x1="690" y1="100" x2="770" y2="420" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+            <!-- 4→7 core to bottom-left -->
+            <line x1="335" y1="375" x2="220" y2="640" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+            <!-- 4→8 core to bottom-center -->
+            <line x1="335" y1="375" x2="500" y2="610" stroke="currentColor" stroke-width="1" opacity="0.12"/>
+            <!-- 5→6 education to languages -->
+            <line x1="695" y1="310" x2="770" y2="420" stroke="currentColor" stroke-width="1" opacity="0.22"/>
+            <!-- 5→9 education to bottom-right -->
+            <line x1="695" y1="310" x2="770" y2="545" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+            <!-- 6→9 languages to bottom-right -->
+            <line x1="770" y1="420" x2="770" y2="545" stroke="currentColor" stroke-width="1" opacity="0.18"/>
+            <!-- 7→8 bottom-left to bottom-center -->
+            <line x1="220" y1="640" x2="500" y2="610" stroke="currentColor" stroke-width="1" opacity="0.15"/>
+            <!-- 1→7 top-left to bottom-left (long diagonal) -->
+            <line x1="120" y1="120" x2="220" y2="640" stroke="currentColor" stroke-width="1" opacity="0.1"/>
+            <!-- 8→9 bottom-center to bottom-right -->
+            <line x1="500" y1="610" x2="770" y2="545" stroke="currentColor" stroke-width="1" opacity="0.12"/>
           </svg>
 
           <!-- Photo -->
           <img src="assets/images/newprofile.png" alt="Tenny Kwon" class="hero__photo-img">
 
-          <!-- Dot 1: top-center-left (decorative) -->
+          <!-- Green bar below photo -->
+          <div class="hero__photo-bar"></div>
+
+          <!-- Dot 1: top-left (decorative) -->
           <div class="hero__node hero__node--1">
             <span class="hero__node-dot"></span>
           </div>
 
-          <!-- Dot 2: top-right (decorative) -->
+          <!-- Dot 2: top-center — TOOLS -->
           <div class="hero__node hero__node--2">
-            <span class="hero__node-dot"></span>
-          </div>
-
-          <!-- Dot 3: left mid — CORE (Skills) -->
-          <div class="hero__node hero__node--3">
-            <span class="hero__node-dot"></span>
-            <div class="hero__node-content">
-              <h3 class="hero__category-heading">Core</h3>
-              <ul class="hero__category-list">
-                <li data-skill="crossborder">Cross-Border Partnerships</li>
-                <li data-skill="program">Program &amp; Project Management</li>
-                <li data-skill="bizdev">Business Development</li>
-                <li data-skill="alignment">Stakeholder Alignment</li>
-                <li data-skill="process">Process Design</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Dot 4: center-left — EDUCATION -->
-          <div class="hero__node hero__node--4">
-            <span class="hero__node-dot"></span>
-            <div class="hero__node-content">
-              <h3 class="hero__category-heading">Education</h3>
-              <ul class="hero__category-list">
-                <li>SCAD | M.A., Creative Business Leadership</li>
-                <li>HUFS | B.Pol.Sci., TV &amp; Film; B.A., English Interpretation &amp; Translation</li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Dot 5: right edge — LANGUAGES -->
-          <div class="hero__node hero__node--5">
-            <span class="hero__node-dot"></span>
-            <div class="hero__node-content">
-              <h3 class="hero__category-heading">Languages</h3>
-              <ul class="hero__category-list">
-                <li>Korean <span class="hero__skill-level">Native</span></li>
-                <li>English <span class="hero__skill-level">Fluent</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Dot 6: bottom-right (decorative) -->
-          <div class="hero__node hero__node--6">
-            <span class="hero__node-dot"></span>
-          </div>
-
-          <!-- Dot 7: bottom-left — TOOLS -->
-          <div class="hero__node hero__node--7">
             <span class="hero__node-dot"></span>
             <div class="hero__node-content">
               <h3 class="hero__category-heading">Tools</h3>
@@ -156,6 +116,65 @@
                 <li>GenAI</li>
               </ul>
             </div>
+          </div>
+
+          <!-- Dot 3: top-right (decorative) -->
+          <div class="hero__node hero__node--3">
+            <span class="hero__node-dot"></span>
+          </div>
+
+          <!-- Dot 4: left-center — CORE (Skills) -->
+          <div class="hero__node hero__node--4">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Core</h3>
+              <ul class="hero__category-list hero__category-list--bulleted">
+                <li data-skill="crossborder">Cross-Border Partnerships</li>
+                <li data-skill="program">Program &amp; Project Management</li>
+                <li data-skill="bizdev">Business Development</li>
+                <li data-skill="alignment">Stakeholder Alignment</li>
+                <li data-skill="process">Process Design</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dot 5: right — EDUCATION -->
+          <div class="hero__node hero__node--5">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Education</h3>
+              <ul class="hero__category-list hero__category-list--education">
+                <li><span class="hero__edu-degree">M.A., Creative Business Leadership</span><span class="hero__edu-school">SCAD</span></li>
+                <li><span class="hero__edu-degree">B.Pol.Sci., TV &amp; Film</span><span class="hero__edu-school">HUFS</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dot 6: far-right — LANGUAGES -->
+          <div class="hero__node hero__node--6">
+            <span class="hero__node-dot"></span>
+            <div class="hero__node-content">
+              <h3 class="hero__category-heading">Languages</h3>
+              <ul class="hero__category-list hero__category-list--bulleted">
+                <li>Korean <span class="hero__skill-level">Native</span></li>
+                <li>English <span class="hero__skill-level">Fluent</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Dot 7: bottom-left (decorative) -->
+          <div class="hero__node hero__node--7">
+            <span class="hero__node-dot"></span>
+          </div>
+
+          <!-- Dot 8: bottom-center (decorative) -->
+          <div class="hero__node hero__node--8">
+            <span class="hero__node-dot"></span>
+          </div>
+
+          <!-- Dot 9: bottom-right (decorative) -->
+          <div class="hero__node hero__node--9">
+            <span class="hero__node-dot"></span>
           </div>
         </div>
       </div>

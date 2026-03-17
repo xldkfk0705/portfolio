@@ -308,10 +308,10 @@ img { max-width: 100%; display: block; }
 /* Photo */
 .hero__photo-img {
   position: absolute;
-  top: 8%;
+  top: 18%;
   left: 50%;
   transform: translateX(-42%);
-  width: 38%;
+  width: 35%;
   height: auto;
   z-index: 1;
   filter: grayscale(100%) contrast(1.1);
@@ -320,6 +320,18 @@ img { max-width: 100%; display: block; }
 
 .hero__network:hover .hero__photo-img {
   filter: grayscale(0%) contrast(1);
+}
+
+/* Green bar below photo */
+.hero__photo-bar {
+  position: absolute;
+  top: 72%;
+  left: 38%;
+  width: 28%;
+  height: 3px;
+  background: var(--accent);
+  z-index: 2;
+  opacity: 0.8;
 }
 
 /* --- Node dots (all 7) --- */
@@ -338,26 +350,30 @@ img { max-width: 100%; display: block; }
   animation: skillPulse 3s ease-in-out infinite;
 }
 
-.hero__node--2 .hero__node-dot { animation-delay: 0.4s; }
-.hero__node--3 .hero__node-dot { animation-delay: 0.8s; }
-.hero__node--4 .hero__node-dot { animation-delay: 1.2s; }
-.hero__node--5 .hero__node-dot { animation-delay: 1.6s; }
-.hero__node--6 .hero__node-dot { animation-delay: 2.0s; }
-.hero__node--7 .hero__node-dot { animation-delay: 2.4s; }
+.hero__node--2 .hero__node-dot { animation-delay: 0.3s; }
+.hero__node--3 .hero__node-dot { animation-delay: 0.6s; }
+.hero__node--4 .hero__node-dot { animation-delay: 0.9s; }
+.hero__node--5 .hero__node-dot { animation-delay: 1.2s; }
+.hero__node--6 .hero__node-dot { animation-delay: 1.5s; }
+.hero__node--7 .hero__node-dot { animation-delay: 1.8s; }
+.hero__node--8 .hero__node-dot { animation-delay: 2.1s; }
+.hero__node--9 .hero__node-dot { animation-delay: 2.4s; }
 
 @keyframes skillPulse {
   0%, 100% { box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.4); }
   50% { box-shadow: 0 0 12px rgba(var(--accent-rgb), 0.8); }
 }
 
-/* Node positions — asymmetric scattered layout (800x700 viewBox) */
-.hero__node--1 { top: 8.6%;  left: 22.5%;  }  /* (180,60) — decorative, top-left */
-.hero__node--2 { top: 7.1%;  left: 52.5%;  }  /* (420,50) — decorative, top-center */
-.hero__node--3 { top: 47.1%; left: 10%;    }  /* (80,330) — Core/Skills, left-center */
-.hero__node--4 { top: 68.6%; left: 25%;    }  /* (200,480) — Education, lower-left cluster */
-.hero__node--5 { top: 42.9%; left: 92.5%;  }  /* (740,300) — Languages, far-right */
-.hero__node--6 { top: 61.4%; left: 77.5%;  }  /* (620,430) — decorative, right-center */
-.hero__node--7 { top: 85.7%; left: 47.5%;  }  /* (380,600) — Tools, bottom-center */
+/* Node positions — matching Figma layout (800x700 viewBox) */
+.hero__node--1 { top: 17%;   left: 15%;    }  /* (120,120) — decorative, top-left */
+.hero__node--2 { top: 8.6%;  left: 66%;    }  /* (530,60)  — Tools, top-center */
+.hero__node--3 { top: 14%;   left: 86%;    }  /* (690,100) — decorative, top-right */
+.hero__node--4 { top: 53.5%; left: 42%;    }  /* (335,375) — Core, left-center */
+.hero__node--5 { top: 44%;   left: 87%;    }  /* (695,310) — Education, right */
+.hero__node--6 { top: 60%;   left: 96%;    }  /* (770,420) — Languages, far-right */
+.hero__node--7 { top: 91%;   left: 27.5%;  }  /* (220,640) — decorative, bottom-left */
+.hero__node--8 { top: 87%;   left: 62.5%;  }  /* (500,610) — decorative, bottom-center */
+.hero__node--9 { top: 78%;   left: 96%;    }  /* (770,545) — decorative, bottom-right */
 
 /* Node content (categories below dots) */
 .hero__node-content {
@@ -365,13 +381,13 @@ img { max-width: 100%; display: block; }
   white-space: nowrap;
 }
 
-.hero__node--4 .hero__node-content {
-  max-width: 260px;
+.hero__node--2 .hero__node-content {
+  max-width: 320px;
   white-space: normal;
 }
 
-.hero__node--7 .hero__node-content {
-  max-width: 320px;
+.hero__node--5 .hero__node-content {
+  max-width: 300px;
   white-space: normal;
 }
 
@@ -402,6 +418,50 @@ img { max-width: 100%; display: block; }
 
 .hero__category-list li:hover {
   color: var(--text-primary);
+}
+
+/* Bulleted lists (green dots) */
+.hero__category-list--bulleted li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero__category-list--bulleted li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Education: degree + school name */
+.hero__category-list--education li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.hero__category-list--education li::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.hero__edu-degree {
+  color: var(--text-secondary);
+}
+
+.hero__edu-school {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 0.78rem;
 }
 
 /* Tools: inline tags */
@@ -875,8 +935,14 @@ img { max-width: 100%; display: block; }
   }
 
   .hero__node--1,
-  .hero__node--2,
-  .hero__node--6 {
+  .hero__node--3,
+  .hero__node--7,
+  .hero__node--8,
+  .hero__node--9 {
+    display: none;
+  }
+
+  .hero__photo-bar {
     display: none;
   }
 
