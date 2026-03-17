@@ -234,19 +234,13 @@ img { max-width: 100%; display: block; }
 
 .hero__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
   align-items: center;
-  gap: clamp(2rem, 4vw, 4rem);
+  gap: clamp(1.5rem, 3vw, 3rem);
   width: 100%;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: clamp(2rem, 5vw, 4rem) var(--container-padding);
-}
-
-.hero__left {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
 }
 
 .hero-text {
@@ -290,11 +284,53 @@ img { max-width: 100%; display: block; }
   line-height: 1.7;
 }
 
-/* --- 2x2 Category Grid --- */
-.hero__categories {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+/* --- Right side: photo + scattered categories --- */
+.hero__right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(450px, 55vh, 700px);
+}
+
+/* --- Profile Photo (no frame, smaller) --- */
+.hero__photo-img {
+  position: relative;
+  z-index: 1;
+  width: clamp(200px, 22vw, 320px);
+  height: auto;
+  filter: grayscale(100%) contrast(1.1);
+  transition: filter 0.5s ease;
+}
+
+.hero__right:hover .hero__photo-img {
+  filter: grayscale(0%) contrast(1);
+}
+
+/* --- Network lines behind photo (wider) --- */
+.hero__photo-network {
+  position: absolute;
+  top: -30px;
+  bottom: -30px;
+  left: -80px;
+  right: -80px;
+  z-index: 0;
+  opacity: 0.6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 500'%3E%3Cline x1='80' y1='40' x2='280' y2='100' stroke='%2339FF14' stroke-width='1' opacity='0.3'/%3E%3Cline x1='280' y1='100' x2='500' y2='50' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='500' y1='50' x2='620' y2='180' stroke='%2339FF14' stroke-width='1' opacity='0.2'/%3E%3Cline x1='620' y1='180' x2='650' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='650' y1='350' x2='500' y2='440' stroke='%2339FF14' stroke-width='1' opacity='0.3'/%3E%3Cline x1='500' y1='440' x2='250' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='250' y1='460' x2='60' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.2'/%3E%3Cline x1='60' y1='350' x2='80' y2='40' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='280' y1='100' x2='250' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.12'/%3E%3Cline x1='500' y1='50' x2='250' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.1'/%3E%3Cline x1='60' y1='350' x2='650' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.08'/%3E%3Cline x1='80' y1='40' x2='500' y2='440' stroke='%2339FF14' stroke-width='1' opacity='0.08'/%3E%3Cline x1='620' y1='180' x2='60' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.1'/%3E%3Cline x1='280' y1='100' x2='650' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.08'/%3E%3Ccircle cx='80' cy='40' r='5' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='280' cy='100' r='6' fill='%2339FF14' opacity='0.7'/%3E%3Ccircle cx='500' cy='50' r='4' fill='%2339FF14' opacity='0.5'/%3E%3Ccircle cx='620' cy='180' r='5' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='650' cy='350' r='6' fill='%2339FF14' opacity='0.7'/%3E%3Ccircle cx='500' cy='440' r='5' fill='%2339FF14' opacity='0.5'/%3E%3Ccircle cx='250' cy='460' r='6' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='60' cy='350' r='4' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='350' cy='250' r='3' fill='%2339FF14' opacity='0.3'/%3E%3Ccircle cx='150' cy='200' r='3' fill='%2339FF14' opacity='0.3'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+[data-theme="light"] .hero__photo-network {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 500'%3E%3Cline x1='80' y1='40' x2='280' y2='100' stroke='%231DB954' stroke-width='1' opacity='0.3'/%3E%3Cline x1='280' y1='100' x2='500' y2='50' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='500' y1='50' x2='620' y2='180' stroke='%231DB954' stroke-width='1' opacity='0.2'/%3E%3Cline x1='620' y1='180' x2='650' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='650' y1='350' x2='500' y2='440' stroke='%231DB954' stroke-width='1' opacity='0.3'/%3E%3Cline x1='500' y1='440' x2='250' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='250' y1='460' x2='60' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.2'/%3E%3Cline x1='60' y1='350' x2='80' y2='40' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='280' y1='100' x2='250' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.12'/%3E%3Cline x1='500' y1='50' x2='250' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.1'/%3E%3Cline x1='60' y1='350' x2='650' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.08'/%3E%3Cline x1='80' y1='40' x2='500' y2='440' stroke='%231DB954' stroke-width='1' opacity='0.08'/%3E%3Cline x1='620' y1='180' x2='60' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.1'/%3E%3Cline x1='280' y1='100' x2='650' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.08'/%3E%3Ccircle cx='80' cy='40' r='5' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='280' cy='100' r='6' fill='%231DB954' opacity='0.7'/%3E%3Ccircle cx='500' cy='50' r='4' fill='%231DB954' opacity='0.5'/%3E%3Ccircle cx='620' cy='180' r='5' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='650' cy='350' r='6' fill='%231DB954' opacity='0.7'/%3E%3Ccircle cx='500' cy='440' r='5' fill='%231DB954' opacity='0.5'/%3E%3Ccircle cx='250' cy='460' r='6' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='60' cy='350' r='4' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='350' cy='250' r='3' fill='%231DB954' opacity='0.3'/%3E%3Ccircle cx='150' cy='200' r='3' fill='%231DB954' opacity='0.3'/%3E%3C/svg%3E");
+}
+
+/* --- Scattered categories (positioned around photo) --- */
+.hero__category {
+  position: absolute;
+  z-index: 2;
 }
 
 .hero__category-heading {
@@ -320,9 +356,9 @@ img { max-width: 100%; display: block; }
   animation: skillPulse 3s ease-in-out infinite;
 }
 
-.hero__category:nth-child(2) .hero__category-dot { animation-delay: 0.5s; }
-.hero__category:nth-child(3) .hero__category-dot { animation-delay: 1s; }
-.hero__category:nth-child(4) .hero__category-dot { animation-delay: 1.5s; }
+.hero__category--skills .hero__category-dot { animation-delay: 0.5s; }
+.hero__category--tools .hero__category-dot { animation-delay: 1s; }
+.hero__category--languages .hero__category-dot { animation-delay: 1.5s; }
 
 @keyframes skillPulse {
   0%, 100% { box-shadow: 0 0 6px rgba(var(--accent-rgb), 0.4); }
@@ -345,6 +381,29 @@ img { max-width: 100%; display: block; }
 
 .hero__category-list li:hover {
   color: var(--text-primary);
+}
+
+/* Category positions */
+.hero__category--education {
+  top: 2%;
+  left: 2%;
+  max-width: 280px;
+}
+
+.hero__category--skills {
+  top: 32%;
+  left: 0;
+}
+
+.hero__category--tools {
+  bottom: 0;
+  left: 10%;
+  max-width: 320px;
+}
+
+.hero__category--languages {
+  top: 35%;
+  right: 0;
 }
 
 /* Tools: inline tags */
@@ -375,44 +434,6 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   opacity: 0.7;
   margin-left: 0.25rem;
-}
-
-/* --- Profile Photo (no frame) --- */
-.hero__photo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero__photo-img {
-  position: relative;
-  z-index: 1;
-  width: clamp(300px, 32vw, 500px);
-  height: auto;
-  filter: grayscale(100%) contrast(1.1);
-  transition: filter 0.5s ease;
-}
-
-.hero__photo:hover .hero__photo-img {
-  filter: grayscale(0%) contrast(1);
-}
-
-/* --- Network lines behind photo --- */
-.hero__photo-network {
-  position: absolute;
-  inset: -40px;
-  z-index: 0;
-  opacity: 0.6;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cline x1='50' y1='30' x2='200' y2='120' stroke='%2339FF14' stroke-width='1' opacity='0.3'/%3E%3Cline x1='200' y1='120' x2='350' y2='60' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='350' y1='60' x2='370' y2='250' stroke='%2339FF14' stroke-width='1' opacity='0.2'/%3E%3Cline x1='370' y1='250' x2='320' y2='420' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='320' y1='420' x2='150' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.3'/%3E%3Cline x1='150' y1='460' x2='30' y2='350' stroke='%2339FF14' stroke-width='1' opacity='0.2'/%3E%3Cline x1='30' y1='350' x2='50' y2='30' stroke='%2339FF14' stroke-width='1' opacity='0.25'/%3E%3Cline x1='200' y1='120' x2='150' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.15'/%3E%3Cline x1='350' y1='60' x2='150' y2='460' stroke='%2339FF14' stroke-width='1' opacity='0.1'/%3E%3Cline x1='30' y1='350' x2='370' y2='250' stroke='%2339FF14' stroke-width='1' opacity='0.12'/%3E%3Cline x1='50' y1='30' x2='320' y2='420' stroke='%2339FF14' stroke-width='1' opacity='0.1'/%3E%3Ccircle cx='50' cy='30' r='5' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='200' cy='120' r='6' fill='%2339FF14' opacity='0.7'/%3E%3Ccircle cx='350' cy='60' r='4' fill='%2339FF14' opacity='0.5'/%3E%3Ccircle cx='370' cy='250' r='5' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='320' cy='420' r='6' fill='%2339FF14' opacity='0.7'/%3E%3Ccircle cx='150' cy='460' r='5' fill='%2339FF14' opacity='0.5'/%3E%3Ccircle cx='30' cy='350' r='4' fill='%2339FF14' opacity='0.6'/%3E%3Ccircle cx='190' cy='290' r='3' fill='%2339FF14' opacity='0.4'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  pointer-events: none;
-}
-
-[data-theme="light"] .hero__photo-network {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Cline x1='50' y1='30' x2='200' y2='120' stroke='%231DB954' stroke-width='1' opacity='0.3'/%3E%3Cline x1='200' y1='120' x2='350' y2='60' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='350' y1='60' x2='370' y2='250' stroke='%231DB954' stroke-width='1' opacity='0.2'/%3E%3Cline x1='370' y1='250' x2='320' y2='420' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='320' y1='420' x2='150' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.3'/%3E%3Cline x1='150' y1='460' x2='30' y2='350' stroke='%231DB954' stroke-width='1' opacity='0.2'/%3E%3Cline x1='30' y1='350' x2='50' y2='30' stroke='%231DB954' stroke-width='1' opacity='0.25'/%3E%3Cline x1='200' y1='120' x2='150' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.15'/%3E%3Cline x1='350' y1='60' x2='150' y2='460' stroke='%231DB954' stroke-width='1' opacity='0.1'/%3E%3Cline x1='30' y1='350' x2='370' y2='250' stroke='%231DB954' stroke-width='1' opacity='0.12'/%3E%3Cline x1='50' y1='30' x2='320' y2='420' stroke='%231DB954' stroke-width='1' opacity='0.1'/%3E%3Ccircle cx='50' cy='30' r='5' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='200' cy='120' r='6' fill='%231DB954' opacity='0.7'/%3E%3Ccircle cx='350' cy='60' r='4' fill='%231DB954' opacity='0.5'/%3E%3Ccircle cx='370' cy='250' r='5' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='320' cy='420' r='6' fill='%231DB954' opacity='0.7'/%3E%3Ccircle cx='150' cy='460' r='5' fill='%231DB954' opacity='0.5'/%3E%3Ccircle cx='30' cy='350' r='4' fill='%231DB954' opacity='0.6'/%3E%3Ccircle cx='190' cy='290' r='3' fill='%231DB954' opacity='0.4'/%3E%3C/svg%3E");
 }
 
 .hero__scroll-hint {
@@ -821,21 +842,37 @@ img { max-width: 100%; display: block; }
     gap: 2.5rem;
   }
 
-  .hero__left { order: 2; }
-  .hero__photo { order: 1; }
-
-  .hero-text { max-width: 100%; }
+  .hero-text { max-width: 100%; order: 2; }
+  .hero__right { order: 1; }
   .hero__name { font-size: clamp(2.25rem, 8vw, 3.5rem); }
   .hero__intro { margin: 0 auto; }
 
-  .hero__photo-img {
-    width: clamp(220px, 50vw, 320px);
+  .hero__right {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    min-height: auto;
   }
 
-  .hero__categories {
+  .hero__photo-img {
+    width: clamp(180px, 40vw, 260px);
+  }
+
+  .hero__photo-network {
+    display: none;
+  }
+
+  .hero__category {
+    position: static;
+    max-width: 100% !important;
     text-align: left;
-    max-width: 400px;
-    margin: 0 auto;
+  }
+
+  .hero__right > .hero__category {
+    width: 100%;
+    max-width: 320px;
   }
 
   .project-nodes {
@@ -856,8 +893,6 @@ img { max-width: 100%; display: block; }
   html { scroll-padding-top: 60px; }
   .zone--hero { padding-top: 60px; }
   .project-detail { padding-top: calc(60px + 2rem); }
-
-  .hero__categories { grid-template-columns: 1fr; }
 
   .connect__links { flex-direction: column; align-items: center; }
   .connect__link { width: 100%; max-width: 280px; justify-content: center; }

@@ -49,67 +49,63 @@
     <!-- Zone 1: Hero + Profile + Categories -->
     <section id="hero" class="zone zone--hero">
       <div class="hero__container">
-        <!-- Left: Identity + 2x2 Category Grid -->
-        <div class="hero__left">
-          <div class="hero-text">
-            <p class="hero__greeting">Tae Eun</p>
-            <h1 class="hero__name">Tenny Kwon</h1>
-            <h2 class="hero__title">Creative Strategist</h2>
-            <p class="hero__tagline">I build the structures that help ideas move.</p>
-            <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
-          </div>
-
-          <div class="hero__categories">
-            <!-- Education -->
-            <div class="hero__category">
-              <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Education</h3>
-              <ul class="hero__category-list">
-                <li>Savannah College of Art and Design (SCAD) | M.A., Creative Business Leadership</li>
-                <li>Hankuk University of Foreign Studies | B.Pol.Sci., Television &amp; Film; B.A., English Interpretation &amp; Translation</li>
-              </ul>
-            </div>
-
-            <!-- Skills -->
-            <div class="hero__category">
-              <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Skills</h3>
-              <ul class="hero__category-list">
-                <li data-skill="crossborder">Cross-Border Partnerships</li>
-                <li data-skill="program">Program &amp; Project Management</li>
-                <li data-skill="bizdev">Business Development</li>
-                <li data-skill="alignment">Stakeholder Alignment</li>
-                <li data-skill="process">Process Design</li>
-              </ul>
-            </div>
-
-            <!-- Tools -->
-            <div class="hero__category">
-              <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Tools</h3>
-              <ul class="hero__category-list hero__category-list--tools">
-                <li>Microsoft Office</li>
-                <li>Google Workspace</li>
-                <li>Notion</li>
-                <li>Figma</li>
-                <li>Canva</li>
-                <li>Adobe Creative Suite</li>
-                <li>GenAI</li>
-              </ul>
-            </div>
-
-            <!-- Languages -->
-            <div class="hero__category">
-              <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Languages</h3>
-              <ul class="hero__category-list">
-                <li>Korean <span class="hero__skill-level">Native</span></li>
-                <li>English <span class="hero__skill-level">Fluent</span></li>
-              </ul>
-            </div>
-          </div>
+        <!-- Left: Identity text -->
+        <div class="hero-text">
+          <p class="hero__greeting">Tae Eun</p>
+          <h1 class="hero__name">Tenny Kwon</h1>
+          <h2 class="hero__title">Creative Strategist</h2>
+          <p class="hero__tagline">I build the structures that help ideas move.</p>
+          <p class="hero__intro">My work sits at the intersection of strategy, systems, and storytelling&mdash;turning complexity into frameworks that people can align around and move with.</p>
         </div>
 
-        <!-- Right: Profile Photo with network lines behind -->
-        <div class="hero__photo">
+        <!-- Right: Photo + scattered categories -->
+        <div class="hero__right">
           <div class="hero__photo-network"></div>
           <img src="assets/images/profile.jpg.png" alt="Tenny Kwon" class="hero__photo-img">
+
+          <!-- Education: top-left -->
+          <div class="hero__category hero__category--education">
+            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Education</h3>
+            <ul class="hero__category-list">
+              <li>Savannah College of Art and Design (SCAD) | M.A., Creative Business Leadership</li>
+              <li>Hankuk University of Foreign Studies | B.Pol.Sci., Television &amp; Film; B.A., English Interpretation &amp; Translation</li>
+            </ul>
+          </div>
+
+          <!-- Skills: left of photo, middle -->
+          <div class="hero__category hero__category--skills">
+            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Skills</h3>
+            <ul class="hero__category-list">
+              <li data-skill="crossborder">Cross-Border Partnerships</li>
+              <li data-skill="program">Program &amp; Project Management</li>
+              <li data-skill="bizdev">Business Development</li>
+              <li data-skill="alignment">Stakeholder Alignment</li>
+              <li data-skill="process">Process Design</li>
+            </ul>
+          </div>
+
+          <!-- Tools: bottom center -->
+          <div class="hero__category hero__category--tools">
+            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Tools</h3>
+            <ul class="hero__category-list hero__category-list--tools">
+              <li>Microsoft Office</li>
+              <li>Google Workspace</li>
+              <li>Notion</li>
+              <li>Figma</li>
+              <li>Canva</li>
+              <li>Adobe Creative Suite</li>
+              <li>GenAI</li>
+            </ul>
+          </div>
+
+          <!-- Languages: far right -->
+          <div class="hero__category hero__category--languages">
+            <h3 class="hero__category-heading"><span class="hero__category-dot"></span>Languages</h3>
+            <ul class="hero__category-list">
+              <li>Korean <span class="hero__skill-level">Native</span></li>
+              <li>English <span class="hero__skill-level">Fluent</span></li>
+            </ul>
+          </div>
         </div>
       </div>
 
